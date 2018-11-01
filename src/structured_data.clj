@@ -118,7 +118,7 @@
       (if (> (count books) 1)
 ;        (pr-str (count books) " books. " (map book->string books) ".")
 ;        (pr-str (count books) " book. " (map book->string books) "."))
-        (str (count books) " books. " (apply str (map book->string books)) ".")
+        (str (count books) " books. "    (apply str (interpose ". " (map book->string books))) ".")
         (str (count books) " book. " (apply str (map book->string books)) "."))
   )
 )
